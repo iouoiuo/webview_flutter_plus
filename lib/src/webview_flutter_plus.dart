@@ -271,7 +271,9 @@ class WebViewPlusController implements WebViewController {
 
   @override
   Future<void> loadUrl(String url, {Map<String, String> headers}) {
-    bool _validURL = Uri.parse(url).isAbsolute;
+   // bool _validURL = Uri.parse(url).isAbsolute;
+    // 循环引入
+    bool _validURL = url.startsWith("http");
     if (_validURL) {
       return _webViewController.loadUrl(url, headers: headers);
     } else {
