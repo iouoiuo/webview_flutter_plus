@@ -9,7 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  webview_flutter: ^1.0.5
+  webview_flutter: 
+      git:
+      url: https://github.com/iouoiuo/webview_flutter.git
+      ref: main 
   mime: ^0.9.6+3
 
 dev_dependencies:
