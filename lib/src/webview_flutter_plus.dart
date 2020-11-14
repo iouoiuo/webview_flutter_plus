@@ -296,6 +296,12 @@ class WebViewPlusController implements WebViewController {
     return _webViewController.scrollTo(x, y);
   }
 
+  @override
+  //iOS only
+  Future<void> setUserTouchEnable(int enable) {
+    return _webViewController.setUserTouchEnable(enable);
+  }
+  
   Future<void> _loadAsset(String uri, {Map<String, String> headers}) async {
     return this.loadUrl('http://localhost:$_port/$uri', headers: headers);
   }
