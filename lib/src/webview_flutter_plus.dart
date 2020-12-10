@@ -354,7 +354,7 @@ class _WebViewPlusState extends State<WebViewPlus> {
 
   String _getInitialUrl(String url, int port) {
     if (url != null) {
-      if (Uri.parse(url).isAbsolute) {
+      if (!url.startsWith('assets/web')) {
         return url;
       } else {
         return 'http://localhost:$port/$url';
